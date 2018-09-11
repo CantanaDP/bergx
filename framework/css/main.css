@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'asap_condensedbold';
+    src: url('../fonts/asapcondensed-bold-webfont.woff2') format('woff2'),
+         url('../fonts/asapcondensed-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'asap_condensedmedium';
+    src: url('../fonts/asapcondensed-medium-webfont.woff2') format('woff2'),
+         url('../fonts/asapcondensed-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'asap_condensedregular';
+    src: url('../fonts/asapcondensed-regular-webfont.woff2') format('woff2'),
+         url('../fonts/asapcondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'asap_condensedsemibold';
+    src: url('../fonts/asapcondensed-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/asapcondensed-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'asap_condensedregular';
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+svg{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+}
+.fa-angle-double-left,.fa-angle-double-right{
+    font-size: 30px;
+}
+.fa-galactic-republic{
+    font-size: 62px;
+}
+/* start of framework */
+
+/* base defitions */
+body {
+    padding: 50px 0px 60px 0px;
+}
+.svg-hidden{
+    display: none;
+}
+/* header definitions */
+.ui-page-theme-a header.ui-bar-inherit {
+    background: #333;
+    border: 0px none;
+}
+header {
+    opacity: 1;
+    font-size: initial;
+}
+header #row {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+header #left-menu,
+header #right-menu {
+    display: block;
+    line-height: 52px;
+    text-align: center;
+    font-size: 19px;
+    outline: none;
+    color: #fff;
+    flex: 0 0 54px;
+    box-sizing: border-box;
+    max-height: 50px;
+}
+header #left-menu a,
+header #right-menu a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+}
+header #brand {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 32px;
+    text-shadow: none;
+}
+.header-line{
+    height: 22px;
+    background: #faa21b;
+    position: relative;
+}
+.header-line-box{
+    width: 100%;
+    position: absolute;
+    top: -15px;
+    height: 16px;
+    background: url("../img/header-line.png") no-repeat center top;
+}
+.ui-header-fixed, .ui-footer-fixed{
+    position: static;
+}
+/* main definitions */
+main {
+    min-height: 5000px;
+    background: #000000;
+    background: -moz-linear-gradient(top, #ffffff 10%, #efefef 100%);
+    background: -webkit-linear-gradient(top, #ffffff 10%,#efefef 100%);
+    background: linear-gradient(to bottom, #ffffff 10%,#efefef 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 );
+}
+.ui-content{
+    padding: 0;
+}
+.league-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 56px;
+    padding: 0 30px 0 36px;
+}
+.league-left,.league-right{
+    display: block;
+}
+.fa-chevron-left{
+    font-size: 27px;
+    color: #000;
+}
+.league-right{
+    font-size: 30px;
+    color: #b6b6b6;
+}
+.league-group{
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+}
+.team-box{
+    display: flex;
+    min-height: 101px;
+    background: #c1c1c1;
+    border-top: 2px solid #b5b5b5;
+    border-bottom: 2px solid #b5b5b5;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    width: 50%;
+    text-shadow: none;
+}
+.score-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 140px;
+    background: url("../img/score-bg.png") no-repeat;
+    background-size: cover;
+}
+.score-container{
+    height: 90px;
+    max-width: 290px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.score-team-time{
+    position: absolute;
+    font-size: 20px;
+    color: #333;
+    top: -12px;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateX(-50%);
+}
+.score-team-one,.score-team-two{
+    font-size: 111px;
+    color: #333;
+}
+.score-team-separ{
+    position: relative;
+    min-height: 38px;
+}
+.dot-top{
+    position: absolute;
+    top: 0;
+    width: 11px;
+    height: 12px;
+    background: #363636;
+}
+.dot-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 11px;
+    height: 12px;
+    background: #363636;
+}
+.live-box{
+    border-top: 1px solid #b5b5b5;
+    border-bottom: 1px solid #b5b5b5;
+    display: flex;
+    justify-content: center;
+    min-height: 63px;
+}
+.live{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 63px;
+    width: 33.3%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal !important;
+    color: #333 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.live-center{
+    border-left: 1px solid #b5b5b5;
+    border-right: 1px solid #b5b5b5;
+}
+.fa-map-marker-alt{
+    font-size: 34px;
+    color: #c1c1c1;
+    margin-right: 15px;
+}
+.fa-signal{
+    display: block;
+    font-size: 34px;
+    color: #c1c1c1;
+    overflow: hidden;
+    width: 41px;
+    height: 36px;
+    margin-right: 15px;
+}
+.fa-youtube{
+    font-size: 40px;
+    color: #c1c1c1;
+    overflow: hidden;
+    margin: -5px 15px 0 0;
+}
+
+
+
+.table-row{
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #b5b5b5;
+}
+.table-row-even{
+    background: #fff;
+}
+.table-row-odd{
+    background: #eee;
+}
+.table-colomn{
+    width: 26%;
+}
+
+.table-title{
+    width: 23.5%;
+}
+.table-title{
+    color: #8c8c8c;
+    font-size: 20px;
+}
+.table-center{
+    margin: 0 13px;
+}
+  
+.table-link{
+    height: 54px;
+    line-height: 54px;
+    display: block;
+    border: 1px solid #7c7c7c;
+    font-size: 25px;
+    color: #1c1c1c !important;
+    position: relative;
+    padding: 0 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: right;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #e1e1e1 100%);
+    background: -webkit-linear-gradient(top, #fefefe 0%,#e1e1e1 100%);
+    background: linear-gradient(to bottom, #fefefe 0%,#e1e1e1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e1e1e1',GradientType=0 );
+}
+.table-link:hover{
+    filter: brightness(90%);
+}
+.table-link:last-child{
+    margin-bottom: 0;
+}
+.table-link span{
+    position: absolute;
+    left: 20px;
+    color: #828282;
+    font-weight: normal !important;
+}
+.table-content{
+    align-self: start;
+    /* justify-content: center; */
+}
+.table-content p{
+    font-size: 20px;
+    color: #8c8c8c;
+    height: 54px;
+    line-height: 54px;
+}
+/* aside definitions */
+aside {
+    display: none;
+}
+
+/* footer definitions */
+footer.ui-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 201;
+    background: rgba(240,240,240,.90);
+}
+footer > ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+}
+footer > ul li {
+    position: relative;
+    flex: 1;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-right: 1px solid #dddddd;
+}
+footer > ul li:last-of-type {
+    border-right: 0px none;
+}
+footer > ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    position: relative;
+    text-decoration: none;
+}
+footer > ul li a > i {
+    position: relative;
+    font-size: 20px;
+    display: block;
+}
+@media only screen and (max-width: 600px) {
+    header #row{
+        min-height: 50px;
+    }
+    .score-box{
+        min-height: 70px;
+        background: #000;
+    }
+    .score-team-one,.score-team-two{
+        color: #fff;
+        font-size: 40px;
+        text-shadow: none;
+    }
+    .score-container{
+        height: 40px;
+        max-width: 140px;
+    }
+
+    .table-link,.table-content p{
+        height: 31px;
+        line-height: 31px;
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    .league-info{
+        padding: 0 15px 0 18px;
+    }
+    .table-title,.league-group{
+        font-size: 15px;
+    }
+    .table-link span{
+        left: 10px;
+    }
+    .table-content p{
+        font-size: 15px;
+    }
+    .fa-chevron-left{
+        font-size: 13px;
+    }
+    .fa-signal,.fa-map-marker-alt,.fa-youtube{
+        color: #000;
+        font-size: 24px;
+        margin-right: 7px;
+    }
+    .fa-galactic-republic{
+        font-size: 36px;
+    }
+    .league-right{
+        font-size: 16px;
+    }
+    .fa-angle-double-left, .fa-angle-double-right{
+        font-size: 20px;
+    }
+    .table-center{
+        margin: 0 3px;
+    }
+    .live {
+        font-size: 15px;
+    }
+    .score-team-time{
+        color: #fff;
+        font-size: 15px;
+        text-shadow: none;
+        top: -8px;
+    }
+    .score-team-separ{
+        min-height: 20px;
+    }
+    .dot-top,.dot-bottom{
+        background: #fff;
+        height: 8px;
+        width: 8px;
+    }
+    .team{
+        font-size: 20px;
+    }
+    .table-row {
+        padding: 8px;
+    }
+}
